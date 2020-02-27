@@ -1,0 +1,101 @@
+/* Part 2: CSS
+Use flexbox, padding, and margins for your layouts. Do not use clears and floats.
+Using your CSS stylesheet (inline edits will not be scored):
+
+Your elements should wrap when your page size changes.
+When your page is compressed, your elements should center themselves horizontally.
+
+Set your content div to take up no more than 960px of page width.
+Using your wrapper div, set your content div to always be horizontally centered in the page.
+Using flexbox, display your main content divs next to one another.
+Ensure your image is on top of your caption text, to the left of your roles and responsibilities.
+Make sure that as your page changes size, your elements wrap below one another properly.
+Set your image and caption to take up no more than 1/3 of the flex space, and your roles to take no less than 2/3 of the space.
+Allow your image to take up no more space than the maximum width of your left column.
+Do not change the size of your UMD logo/Testudo picture while doing this.
+Using shorthand, add a solid, one-pixel border to your image.
+Set your image to have rounded corners of 4px.
+Ensure your "Roles" text and name have a different font than your body fonts.
+Import no more than three weights of a display font from Google Fonts for this.
+Style your work history entries so that they all end up consistent in their appearance.
+Change your role title so it stands out by adjusting no more than two rules.
+Set your body background to a pale color and highlight the background of your text and image.
+Add a maximum screen size break at 1000 pixels.
+If your display size is less than 1000 pixels...
+set your container to center content in the page
+Set your image-and-caption box to form a row
+Evenly space your image and caption within that row
+Set a bottom margin on your image and caption to ensure good spacing. */
+
+/* COLORS:
+Dark        bg-header           #324D00
+Light       xxxxxxxx            #A0D540
+Neon        xxxxxxxx            #85CC00
+Dark2       xxxxxxxx            #3A4D17
+midd        xxxxxxxx            #639900
+*/
+
+.header {
+  display: flex;
+  background-color: #324d00;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 15px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.logo {
+  max-height: 150px;
+  padding: 15px;
+}
+.header h1 {
+  color: #a0d540;
+}
+.wrapper {
+  display: flex;
+  background-color: black;
+  align-items: center;
+  flex-direction: column;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #639900;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+}
+.side {
+  flex: 0 1 auto;
+  width: 175px;
+  background-color: aqua;
+}
+.content {
+  flex: 0 2 auto;
+  background-color: lightcoral;
+}
+
+.profile {
+  width: inherit;
+  height: auto;
+  border-radius: 4px;
+}
+
+.caption {
+  flex: 0 1 auto;
+  background-color: khaki;
+  
+}
+
+@media screen and (max-width: 1000px) { 
+    .container {
+        justify-content: center;
+    }
+    .side {
+        flex: 1 0 auto;
+        display:flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+ }
