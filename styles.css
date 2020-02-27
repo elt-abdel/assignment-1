@@ -64,11 +64,12 @@ midd        xxxxxxxx            #639900
   justify-content: space-between;
   align-items: flex-start;
   flex-direction: row;
+  max-width: 960px;
 }
 .side {
   flex: 0 1 auto;
   width: 175px;
-  background-color: aqua;
+  background-color: red;
 }
 .content {
   flex: 0 2 auto;
@@ -79,6 +80,7 @@ midd        xxxxxxxx            #639900
   /* flex: 1; */
   width: inherit;
   height: auto;
+  border:1px solid black;
   border-radius: 4px;
 }
 
@@ -99,5 +101,6 @@ midd        xxxxxxxx            #639900
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    flex-wrap: wrap;
   }
 }
