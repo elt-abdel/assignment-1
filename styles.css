@@ -38,17 +38,27 @@ h3 {
   font-size: 18px;
 }
 /* end text/font stuff */
+
 body {
   background-color: #adffd7;
 }
+
+/* header negative margin trick via https://css-tricks.com/full-browser-width-bars/*/
+
+html {
+  overflow-x: hidden;
+}
+
 .header {
   display: flex;
   background-color: #b81500;
   justify-content: space-around;
   align-items: center;
-  margin-bottom: 15px;
   flex-direction: row;
   flex-wrap: wrap;
+  margin: -9999rem -9999rem 0 -9999rem;
+  padding: 9999rem 9999rem 9px 9999rem;
+  margin-bottom: 15px;
 }
 
 .logo {
